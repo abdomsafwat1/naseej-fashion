@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #8B7355;
+  border-radius: 4px;
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 500ms ease both;
+}
+.animate-slide-up {
+  animation: slideUp 500ms ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ---------- Reusable component classes ---------- */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-primary px-6 py-3 text-sm font-medium tracking-wide text-white transition-colors duration-300 hover:bg-bronze dark:bg-bronze dark:hover:bg-primary;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm border border-primary px-6 py-3 text-sm font-medium tracking-wide text-primary transition-colors duration-300 hover:bg-primary hover:text-white dark:border-cream dark:text-cream dark:hover:bg-cream dark:hover:text-primary;
+  }
+  .section-label {
+    @apply mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-bronze;
+  }
+  .input-field {
+    @apply w-full rounded-sm border border-black/10 bg-white px-4 py-3 text-sm text-maintext outline-none transition focus:border-bronze dark:border-white/10 dark:bg-white/5 dark:text-cream;
+  }
+}
