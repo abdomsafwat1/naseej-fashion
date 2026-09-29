@@ -9,7 +9,7 @@ import pantsBeige from '../assets/pants-beige.jpg';
 import shoeLeather from '../assets/shoe-leather.webp';
 import shoeSuede from '../assets/shoe-suede.jpg';
 
-export const categories = ['T-Shirts', 'Hoodies', 'Jackets', 'Pants', 'Dresses', 'Accessories'];
+export const categories = ['T-Shirts', 'Hoodies', 'Jackets', 'Pants', 'Dresses', 'Shoes'];
 
 export const categoryImages = {
   'T-Shirts': tshirtBlack,
@@ -160,7 +160,7 @@ export const products = [
   {
     id: 9,
     name: 'Suede Low-Top Sneakers',
-    category: 'Accessories',
+    category: 'Shoes',
     price: 540,
     oldPrice: null,
     discount: 0,
@@ -177,7 +177,7 @@ export const products = [
   {
     id: 10,
     name: 'Leather Low-Top Sneakers',
-    category: 'Accessories',
+    category: 'Shoes',
     price: 590,
     oldPrice: 650,
     discount: 9,
